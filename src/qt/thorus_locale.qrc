@@ -1,0 +1,20 @@
+<!DOCTYPE RCC><RCC version="1.0">
+    <qresource prefix="/translations">
+        <file alias="bg">locale/thorus_bg.qm</file>
+        <file alias="de">locale/thorus_de.qm</file>
+        <file alias="en">locale/thorus_en.qm</file>
+        <file alias="es">locale/thorus_es.qm</file>
+        <file alias="fi">locale/thorus_fi.qm</file>
+        <file alias="fr">locale/thorus_fr.qm</file>
+        <file alias="it">locale/thorus_it.qm</file>
+        <file alias="ja">locale/thorus_ja.qm</file>
+        <file alias="pl">locale/thorus_pl.qm</file>
+        <file alias="pt">locale/thorus_pt.qm</file>
+        <file alias="ru">locale/thorus_ru.qm</file>
+        <file alias="sk">locale/thorus_sk.qm</file>
+        <file alias="sv">locale/thorus_sv.qm</file>
+        <file alias="vi">locale/thorus_vi.qm</file>
+        <file alias="zh_CN">locale/thorus_zh_CN.qm</file>
+        <file alias="zh_TW">locale/thorus_zh_TW.qm</file>
+    </qresource>
+</RCC>

@@ -1,0 +1,6 @@
+usr/local/bin/thorus-qt usr/bin
+share/pixmaps/thorus32.xpm usr/share/pixmaps
+share/pixmaps/thorus16.xpm usr/share/pixmaps
+share/pixmaps/thorus128.png usr/share/pixmaps
+debian/thorus-qt.desktop usr/share/applications
+debian/thorus-qt.protocol usr/share/kde4/services/

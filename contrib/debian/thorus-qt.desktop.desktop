@@ -1,0 +1,11 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Thorus
+Comment=Thorus P2P Cryptocurrency
+Exec=thorus-qt %u
+Terminal=false
+Type=Application
+Icon=thorus128
+MimeType=x-scheme-handler/thorus;
+Categories=Office;Finance;
+Name[en_US]=thorus-qt.desktop
