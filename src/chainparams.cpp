@@ -130,6 +130,11 @@ public:
         vSeeds.push_back(CDNSSeedData("thorus-crypto.com", "seed2.thorus-crypto.com"));
         vSeeds.push_back(CDNSSeedData("thorus-crypto.com", "seed3.thorus-crypto.com"));
         vSeeds.push_back(CDNSSeedData("thorus-crypto.com", "seed4.thorus-crypto.com"));
+        vSeeds.push_back(CDNSSeedData("188.225.77.29", "188.225.77.29"));
+        vSeeds.push_back(CDNSSeedData("188.225.78.95", "188.225.78.95"));
+        vSeeds.push_back(CDNSSeedData("188.225.78.87", "188.225.78.87"));
+        vSeeds.push_back(CDNSSeedData("188.225.18.136", "188.225.18.136"));
+        vSeeds.push_back(CDNSSeedData("188.225.57.205", "188.225.57.205"));
 
         // Thorus addresses start with 'V'
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,65);
