@@ -86,8 +86,8 @@ unsigned int static DarkGravityWave(const CBlockIndex* pindexLast, const Consens
     const CBlockIndex *BlockReading = pindexLast;
     int64_t nActualTimespan = 0;
     int64_t LastBlockTime = 0;
-    int64_t PastBlocksMin = 24;
-    int64_t PastBlocksMax = 24;
+    int64_t PastBlocksMin = 1;
+    int64_t PastBlocksMax = 1;
     int64_t CountBlocks = 0;
     arith_uint256 PastDifficultyAverage;
     arith_uint256 PastDifficultyAveragePrev;
