@@ -11,10 +11,9 @@
 #include "primitives/block.h"
 #include "uint256.h"
 #include "util.h"
-
+#include <stdio.h>
 #include <math.h>
-
-unsigned int static KimotoGravityWell(const CBlockIndex* pindexLast, const Consensus::Params& params) {
+    unsigned int static KimotoGravityWell(const CBlockIndex* pindexLast, const Consensus::Params& params) {
     const CBlockIndex *BlockLastSolved = pindexLast;
     const CBlockIndex *BlockReading = pindexLast;
     uint64_t PastBlocksMass = 0;
@@ -79,18 +78,18 @@ unsigned int static KimotoGravityWell(const CBlockIndex* pindexLast, const Conse
 
     return bnNew.GetCompact();
 }
-
-unsigned int static DarkGravityWave(const CBlockIndex* pindexLast, const Consensus::Params& params) {
-    /* current difficulty formula, thorus - DarkGravity v3, written by Evan Duffield - evan@thorus.org */
+    unsigned int static DarkGravityWave(const CBlockIndex* pindexLast, const Consensus::Params& params) {
+    /* current difficulty formula, thorus - DarkGravity v3, written by Evan Duffield*/
     const CBlockIndex *BlockLastSolved = pindexLast;
     const CBlockIndex *BlockReading = pindexLast;
     int64_t nActualTimespan = 0;
     int64_t LastBlockTime = 0;
-    int64_t PastBlocksMin = 24;
-    int64_t PastBlocksMax = 24;
     int64_t CountBlocks = 0;
     arith_uint256 PastDifficultyAverage;
     arith_uint256 PastDifficultyAveragePrev;
+    int64_t PastBlocksMin = 24;
+    int64_t PastBlocksMax = 24;
+
 
     if (BlockLastSolved == NULL || BlockLastSolved->nHeight == 0 || BlockLastSolved->nHeight < PastBlocksMin) {
         return UintToArith256(params.powLimit).GetCompact();
@@ -134,19 +133,19 @@ unsigned int static DarkGravityWave(const CBlockIndex* pindexLast, const Consens
     }
 
     return bnNew.GetCompact();
+
 }
 
 unsigned int GetNextWorkRequired(const CBlockIndex* pindexLast, const CBlockHeader *pblock, const Consensus::Params& params)
 {
     unsigned int retarget = DIFF_DGW;
-
     // mainnet/regtest share a configuration
     if (Params().NetworkIDString() == CBaseChainParams::MAIN || Params().NetworkIDString() == CBaseChainParams::REGTEST) {
-        if (pindexLast->nHeight + 1 >= 700) retarget = DIFF_DGW;
+        if (pindexLast->nHeight + 1 >= 400) retarget = DIFF_DGW;
         else retarget = DIFF_BTC;
     // testnet -- we want a lot of coins in existance early on
     } else {
-        if (pindexLast->nHeight + 1 >= 650) retarget = DIFF_DGW;
+        if (pindexLast->nHeight + 1 >= 400) retarget = DIFF_DGW;
         else retarget = DIFF_BTC;
     }
 
